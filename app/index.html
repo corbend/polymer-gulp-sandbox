@@ -1,0 +1,60 @@
+<!-- NOTE: Please don not delete any of the comments below -->
+<!doctype html>
+<html class="no-js" ng-app="myApp">
+    <head>
+        <meta charset="utf-8">
+        <title>components</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <link rel="import" href="bower_components/polymer/polymer.html"/>
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <!-- build:css styles/vendor.css -->
+        <!-- bower:css -->
+        <link rel="stylesheet" href="bower_components/bootstrap-css/css/bootstrap.min.css" />
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- build:css({.tmp,app}) styles/main.css -->
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- endbuild -->
+
+        <!-- build:js scripts/modernizr.js -->
+        <script src="bower_components/modernizr/modernizr.js"></script>
+        <!-- endbuild -->
+    </head>
+    <body>
+        <!-- build:js scripts/vendor.js -->
+        <!-- bower:js -->
+<!--         // <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
+        // <script src="bower_components/polymer/polymer.js"></script>
+        // <script src="bower_components/bootstrap-css/js/bootstrap.min.js"></script> -->
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- Any include make it between the build comments below -->
+        <!-- build:js({app,.tmp}) scripts/main.js -->
+
+        <!-- inject:partials -->
+        <!-- endinject -->
+        <!-- endbuild -->
+        <div id="shadow-host">Hello 1</div>
+        <template id="my-tpl">
+            <div class="wrapper">
+                <h1>Hello from template</h1>
+            </div>
+        </template>
+
+        <template id="counter-tpl">
+            <div class="wrapper">
+                <div class="counter-body">
+                    <content select="*"></content>
+                </div>
+            </div>
+        </template>
+
+        <script src="scripts/App.js"></script>
+
+        <x-counter>00:05</x-counter>
+    </body>
+</html>

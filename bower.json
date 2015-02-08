@@ -1,0 +1,13 @@
+{
+  "name": "yogulpangular",
+  "version": "0.0.0",
+  "dependencies": {
+    "modernizr": "2.8.x",
+    "bootstrap-sass-official": "3.1.x",
+    "polymer": "~0.5.4",
+    "app-router": "~2.4.0",
+    "bootstrap-css": "~3.2.0",
+    "firebase-element": "Polymer/firebase-element#~0.5.4",
+    "webcomponentsjs": "~0.5.4"
+  }
+}
