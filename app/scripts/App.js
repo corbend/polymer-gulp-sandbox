@@ -45,14 +45,17 @@
 	}
 
 	XCounterProto.attachedCallback = function() {
+		
 		console.log("ATTACHED!");
+
 		this.counterBody = this.__root.querySelector('content');
-		console.log(this.counterBody);
-		this.counterBody.innerHTML = this.innerHTML;
 
 		var changeTimer = function() {
 
-			var parts = this.counterBody.innerHTML.split(":");
+			var timerContent = this.counterBody.getDistributedNodes()[0];
+
+			var timerContentText = timerContent.innerHTML;
+			var parts = timerContentText.split(":");
 			console.log(parts);
 			var minutes = parseInt(parts[0]);
 			var seconds = parseInt(parts[1]);
@@ -71,7 +74,7 @@
 				clearInterval(this.timer);
 			}
 
-			this.counterBody.innerHTML = pad(minutes) + ":" + pad(seconds);
+			timerContent.innerHTML = pad(minutes) + ":" + pad(seconds);
 
 			this.onChange();
 		}

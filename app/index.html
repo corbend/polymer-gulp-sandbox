@@ -26,9 +26,9 @@
     <body>
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
-<!--         // <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
-        // <script src="bower_components/polymer/polymer.js"></script>
-        // <script src="bower_components/bootstrap-css/js/bootstrap.min.js"></script> -->
+        <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
+        <script src="bower_components/polymer/polymer.js"></script>
+        <script src="bower_components/bootstrap-css/js/bootstrap.min.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 
@@ -46,6 +46,25 @@
         </template>
 
         <template id="counter-tpl">
+            <style>
+
+                .counter-body {
+                    background-color: indigo;
+                    padding: 10px;
+                    font-size: 20px;
+                    font-weight: 400;
+                    border: 1px solid #ccc;
+                    width: 6em;
+                    text-align: center;
+                    border-radius: 10px;
+                }
+
+                content::content h1 {
+                    color: orange;
+                }
+
+            </style>
+
             <div class="wrapper">
                 <div class="counter-body">
                     <content select="*"></content>
@@ -55,6 +74,7 @@
 
         <script src="scripts/App.js"></script>
 
-        <x-counter>00:05</x-counter>
+        <x-counter><h1>00:05</h1></x-counter>
+        <x-counter><h1>10:05</h1></x-counter>
     </body>
 </html>
